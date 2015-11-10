@@ -44,7 +44,7 @@ class HangpersonGame
   end
   
   def check_win_or_lose
-    return :lose if guesses.length + wrong_guesses.length >= 7
+    return :lose if wrong_guesses.length >= 7
     @word.split("").each do |letter|
       return :play if !(@guesses.include? letter)
     end
